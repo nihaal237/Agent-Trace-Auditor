@@ -1,0 +1,24 @@
+{
+  "session_id": "session_001",
+  "total_steps": 6,
+  "regressions_found": 1,
+  "regressions": [
+    {
+      "newly_failing_tests": [
+        "test_free_sample_checkout_is_zero"
+      ],
+      "detected_between_steps": [
+        3,
+        6
+      ],
+      "suspect_steps": [
+        {
+          "step": 5,
+          "file": "inventory.py",
+          "reasoning": "Round instead of truncate, and simplify is_free check while I'm here.",
+          "diff": "- truncated = int(discounted * 100) / 100\n+ truncated = round(discounted, 2)\n- return item.price == 0\n+ return round(item.price, 2) <= 0"
+        }
+      ]
+    }
+  ]
+}
