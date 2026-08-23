@@ -41,16 +41,7 @@ class Inventory:
         item = self.items[sku]
         discounted = item.price * (1 - percent_off / 100)
         return round(discounted, 2)
-    
-    def apply_bulk_discount(self, skus: list, percent_off: float) -> dict:
-        """Apply the same discount to multiple SKUs at once. No test covers this."""
-        results = {}
-        for sku in skus:
-            item = self.items[sku]
-            discounted = item.price * (1 - percent_off / 100)
-            results[sku] = round(discounted, 2)
-        return results
-    
+
     def is_free(self, sku: str) -> bool:
         """An item is 'free' if its price is exactly 0."""
         item = self.items[sku]

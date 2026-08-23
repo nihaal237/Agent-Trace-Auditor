@@ -1,0 +1,22 @@
+{
+  "file": "toy_repo\\inventory.py",
+  "total_changed_lines_raw": 10,
+  "total_changed_statements": 7,
+  "non_statement_changed_lines": [
+    44,
+    46,
+    53
+  ],
+  "covered_changed_lines": [
+    45
+  ],
+  "uncovered_changed_lines": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "debt_ratio": 0.857
+}
